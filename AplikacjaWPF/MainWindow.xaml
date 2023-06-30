@@ -1,0 +1,46 @@
+﻿<Window x:Class="AplikacjaWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AplikacjaWPF"
+        mc:Ignorable="d"
+        Title="NumberGuesser" Height="400" Width="400"
+        ResizeMode="NoResize">
+    <Grid x:Name="Siatka">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="33*"/>
+            <ColumnDefinition Width="67*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="Black"/>
+                <GradientStop Color="#FF6ECEBF" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Button x:Name="Button_exit" Content="Zakończ" HorizontalAlignment="Left" Margin="34,300,0,0" VerticalAlignment="Top" FontFamily="Berlin Sans FB" Height="31" Width="68" Grid.Column="1" Click="Button_exit_Click"/>
+        <Button x:Name="Button_guess" Content="Zatwierdź podaną liczbę" HorizontalAlignment="Left" Margin="115,218,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.12,3.396" FontFamily="Berlin Sans FB" Width="170" Height="40" FontSize="14" Grid.ColumnSpan="2" Click="Button_guess_Click"/>
+        <TextBox x:Name="Title" HorizontalAlignment="Left" Margin="60,35,0,0" TextWrapping="Wrap" Text="NumberGuesser" VerticalAlignment="Top" Width="280" TextChanged="TextBox_TextChanged" BorderBrush="{x:Null}" TextAlignment="Center" FontFamily="Berlin Sans FB" Foreground="#FFA91717" Height="42" FontSize="36" Grid.ColumnSpan="2" Cursor="Arrow" IsReadOnly="True" BorderThickness="0,0,0,0">
+            <TextBox.Background>
+                <ImageBrush/>
+            </TextBox.Background>
+        </TextBox>
+        <TextBox x:Name="Task_text" HorizontalAlignment="Left" Margin="60,100,0,0" TextWrapping="Wrap" Text="Zgadnij liczbę z zakresu 1 - 10." VerticalAlignment="Top" Width="280" TextChanged="TextBox_TextChanged" FontFamily="Berlin Sans FB" BorderBrush="{x:Null}" TextAlignment="Center" FontSize="22" Grid.ColumnSpan="2" IsReadOnly="True" BorderThickness="0,0,0,0" Foreground="#FFA08D8D">
+            <TextBox.Background>
+                <ImageBrush/>
+            </TextBox.Background>
+        </TextBox>
+        <ComboBox x:Name="NumbersList" Grid.Column="1" HorizontalAlignment="Left" Margin="8,170,0,0" VerticalAlignment="Top" Width="120" SelectedIndex="0">
+            <ListBoxItem Content="1"/>
+            <ListBoxItem Content="2"/>
+            <ListBoxItem Content="3"/>
+            <ListBoxItem Content="4"/>
+            <ListBoxItem Content="5"/>
+            <ListBoxItem Content="6"/>
+            <ListBoxItem Content="7"/>
+            <ListBoxItem Content="8"/>
+            <ListBoxItem Content="9"/>
+            <ListBoxItem Content="10"/>
+        </ComboBox>
+    </Grid>
+</Window>
